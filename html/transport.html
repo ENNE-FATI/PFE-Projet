@@ -195,60 +195,182 @@ Purchase:
                         </br>
              
             </br>
-                            <!-- Search Form -->
-                            <div class="search-pan row mx-0 theme-border-radius">
-                                <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                    <div class="form-group">
-                                        <label for="tripType" class="form-label">Trip Type</label>
-                                        <select class="form-control" id="tripType" name="tripType">
-                                            <option value="outstationOneWay">Outstation One-way</option>
-                                            <option value="outstationOneWay">Outstation Round-Trip</option>
-                                            <option value="outstationOneWay">Cab from Airport</option>
-                                            <option value="outstationOneWay">Cab to Airport</option>
-                      
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                    <div class="form-group">
-                                        <label for="from" class="form-label">From</label>
-                                        <input class="form-control" list="datalistOptions" id="from" placeholder="Delhi">
-                                        <datalist id="datalistOptions">
-                                            <option value="Delhi">
-                                            <option value="Mumbai">
-                                            <option value="Chennai">
-                                            <option value="Kolkata">
-                                            <option value="Bangalore">
-                                        </datalist>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                    <div class="form-group">
-                                        <label for="to" class="form-label">To</label>
-                                        <input class="form-control" list="datalistOptionsTo" id="to" placeholder="Goa">
-                                        <datalist id="datalistOptionsTo">
-                                            <option value="Goa">
-                                            <option value="Kerala">
-                                            <option value="Rajasthan">
-                                            <option value="Andaman">
-                                            <option value="Uttarakhand">
-                                        </datalist>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                    <div class="form-group">
-                                        <label for="pickupDate" class="form-label">Pickup Date & Time</label>
-                                        <input type="datetime-local" class="form-control" id="pickupDate" name="pickupDate" value="2020-11-19T14:54">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
-                                    <button type="submit" class="btn btn-search"
-                                    onclick="window.location.href='#';">
-                                    <span class="fw-bold"><i
-                                            class="bi bi-search me-2"></i>Search</span>
-                                </button>
+
+            <!--********************** les formulaire ****************************-->
+
+
+
+            <div class="container mt-5">
+             
+                <ul class="nav nav-tabs d-flex justify-content-center border-0" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="car-tab" data-bs-toggle="tab" data-bs-target="#car" type="button" role="tab" aria-controls="car" aria-selected="true">
+                            <i class="fas fa-car"></i> <span class="d-none d-md-inline">Car</span> </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="taxi-tab" data-bs-toggle="tab" data-bs-target="#taxi" type="button" role="tab" aria-controls="taxi" aria-selected="false">
+                            <i class="fas fa-taxi"></i> <span class="d-none d-md-inline">Taxi</span> </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="bus-tab" data-bs-toggle="tab" data-bs-target="#bus" type="button" role="tab" aria-controls="bus" aria-selected="false">
+                            <i class="fas fa-bus"></i> <span class="d-none d-md-inline">Bus</span> </button>
+                    </li>
+                </ul>
+                </div>
+                </br>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="car" role="tabpanel" aria-labelledby="car-tab">
+                        <div class="search-pan row mx-0 theme-border-radius">
+                            <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="tripType" class="form-label">Trip Type</label>
+                                    <select class="form-control" id="tripType" name="tripType">
+                                        <option value="outstationOneWay">Outstation One-way</option>
+                                        <option value="outstationOneWay">Outstation Round-Trip</option>
+                                        <option value="outstationOneWay">Cab from Airport</option>
+                                        <option value="outstationOneWay">Cab to Airport</option>
+                                    </select>
                                 </div>
                             </div>
+                            <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="from" class="form-label">From</label>
+                                    <input class="form-control" list="datalistOptions" id="from" placeholder="Delhi">
+                                    <datalist id="datalistOptions">
+                                        <option value="Delhi">
+                                        <option value="Mumbai">
+                                        <option value="Chennai">
+                                        <option value="Kolkata">
+                                        <option value="Bangalore">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="to" class="form-label">To</label>
+                                    <input class="form-control" list="datalistOptionsTo" id="to" placeholder="Goa">
+                                    <datalist id="datalistOptionsTo">
+                                        <option value="Goa">
+                                        <option value="Kerala">
+                                        <option value="Rajasthan">
+                                        <option value="Andaman">
+                                        <option value="Uttarakhand">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="pickupDate" class="form-label">Pickup Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="pickupDate" name="pickupDate" value="2020-11-19T14:54">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-2 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <button type="submit" class="btn btn-search" onclick="window.location.href='#';">
+                                    <span class="fw-bold"><i class="bi bi-search me-2"></i>Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="taxi" role="tabpanel" aria-labelledby="taxi-tab">
+                        <div class="search-pan row mx-0 theme-border-radius">
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="fromTaxi" class="form-label">From</label>
+                                    <input class="form-control" list="datalistOptionsTaxi" id="fromTaxi" placeholder="Enter pickup location">
+                                    <datalist id="datalistOptionsTaxi">
+                                        <option value="Delhi Airport">
+                                        <option value="Mumbai Central">
+                                        <option value="Chennai Egmore">
+                                        <option value="Kolkata Howrah">
+                                        <option value="Bangalore Majestic">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="toTaxi" class="form-label">To</label>
+                                    <input class="form-control" list="datalistOptionsToTaxi" id="toTaxi" placeholder="Enter destination">
+                                    <datalist id="datalistOptionsToTaxi">
+                                        <option value="Goa Airport">
+                                        <option value="Kerala Munnar">
+                                        <option value="Rajasthan Jaipur">
+                                        <option value="Andaman Port Blair">
+                                        <option value="Uttarakhand Dehradun">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="pickupDateTaxi" class="form-label">Pickup Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="pickupDateTaxi" name="pickupDateTaxi" value="2024-03-12T18:30">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <button type="submit" class="btn btn-search" onclick="window.location.href='#';">
+                                    <span class="fw-bold"><i class="bi bi-search me-2"></i>Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="bus" role="tabpanel" aria-labelledby="bus-tab">
+                        <div class="search-pan row mx-0 theme-border-radius">
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="fromBus" class="form-label">From</label>
+                                    <input class="form-control" list="datalistOptionsBus" id="fromBus" placeholder="Enter starting point">
+                                    <datalist id="datalistOptionsBus">
+                                        <option value="Delhi ISBT">
+                                        <option value="Mumbai Dadar">
+                                        <option value="Chennai Koyambedu">
+                                        <option value="Kolkata Esplanade">
+                                        <option value="Bangalore Kempegowda">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="toBus" class="form-label">To</label>
+                                    <input class="form-control" list="datalistOptionsToBus" id="toBus" placeholder="Enter destination">
+                                    <datalist id="datalistOptionsToBus">
+                                        <option value="Goa Madgaon">
+                                        <option value="Kerala Ernakulam">
+                                        <option value="Rajasthan Udaipur">
+                                        <option value="Andaman Havelock">
+                                        <option value="Uttarakhand Nainital">
+                                    </datalist>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <div class="form-group">
+                                    <label for="pickupDateBus" class="form-label">Pickup Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="pickupDateBus" name="pickupDateBus" value="2024-03-13T20:00">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4 col-xl-3 ps-0 mb-2 mb-xl-0 pe-0 pe-lg-2">
+                                <button type="submit" class="btn btn-search" onclick="window.location.href='#';">
+                                    <span class="fw-bold"><i class="bi bi-search me-2"></i>Search</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+                            <!-- Search Form -->
+                            
+                                
+                               
+                                
+                                
+                           
                         </div>
                     </div>
                 </div>
