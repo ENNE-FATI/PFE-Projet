@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Bootstrap CSS -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="ThemesLay">
+    <title>RoundTours - Tours and Travel Landing Page</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="80x80" href="assets/images/favicon.png">
+    <!-- Main CSS -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+   .contact-section {
+            width: 80%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+        .contact-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container {
+            width: 50%;
+            padding: 20px;
+        }
+        .form-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-container p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .input-group input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            resize: none;
+        }
+        button {
+            background: none;
+            color: #0393D2;
+            padding: 10px 20px;
+            border: 1px solid #0393D2;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .map-container {
+            width: 45%;
+            height: 500px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+       
+    </style>
+</head>
+
+<body>  
+     <!-- page content area -->
+     <div class="pagewrap">
+        <div class="head-wrapper">
+            <!-- header section -->
+            <header class="header theme-bg-white">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg py-3 py-lg-0 px-0">
+                        <a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="Brand Logo"
+                                title="Brand Logo" class="img-fluid"></a>
+                        <button class="navbar-toggler px-1 btn rounded-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto page-menu" id="nav" style="margin-left :136px ;">
+                                <li class="nav-item"><a class="nav-link pe-5 ps-0 ps-lg-5" href="index.html">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link pe-5" href="about.html">À propos</a></li>
+                            
+                                <!-- Dropdown Pages -->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link pe-5 dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <ul class="dropdown-menu shadow border-0 rounded-3" aria-labelledby="pagesDropdown">
+                                        <li><a class="dropdown-item py-2" href="index.html#offers">Offres</a></li>
+                                        <li><a class="dropdown-item py-2" href="index.html#holidays">Destination</a></li>
+                                        <li><a class="dropdown-item py-2" href="index.html#review">Témoignages</a></li>
+                                    </ul>
+                                </li>
+                            
+                                <li class="nav-item"><a class="nav-link pe-5" href="Contact.html">Contact</a></li>
+                            </ul>
+                            
+                            <ul class="navbar-nav page-menu mb-3 mb-lg-0">
+                                <!-- language list -->
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link mein-link dropdown-toggle" id="navbarDropdown1"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-globe me-2"></i>Eng</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                                        <li><a class="dropdown-item" href="#">Russian</a></li>
+                                        <li><a class="dropdown-item" href="#">French</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- Currency list -->
+                                <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link mein-link dropdown-toggle" id="navbarDropdown2"
+                                        data-bs-toggle="dropdown" aria-expanded="false">INR</a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <li><a class="dropdown-item" href="#">USD</a></li>
+                                        <li><a class="dropdown-item" href="#">EUR</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <!-- user account  -->
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link mein-link d-inline-block position-relative">
+                                        <i class="bi bi-bell"></i>
+                                        <span
+                                            class="position-absolute translate-middle p-1 bg-success border border-light rounded-circle">
+                                            <span class="visually-hidden">New alerts</span>
+                                        </span>
+                                    </a>
+                                </li>
+                                <!-- user account  -->
+                                <li class="nav-item dropdown my-auto">
+                                    <a href="#" class="nav-link dropdown-toggle p-0 user" id="navbarDropdown3"
+                                        data-bs-toggle="dropdown" aria-expanded="false"><span
+                                            class="d-inline-block p-2 theme-bg-primary rounded-circle lh-1"><i
+                                                class="bi bi-person"></i></span></a>
+                                    <ul class="dropdown-menu dropdown-menu-end sub-menu"
+                                        aria-labelledby="navbarDropdown3">
+                                        <li><a class="dropdown-item" href="creerCompte.html">Sign in</a></li>
+                                        <li><a class="dropdown-item" href="ConnexionUser.html">Register</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- search engine section-->
+            <div class="search-engine">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-12 mb-5 text-center position-relative">
+                            <h1 class="display-3 fw-bold mb-4 theme-text-white theme-text-shadow">
+                                Un voyage vers l'aventure
+                            </h1>
+                            <h4 class="mb-0 theme-text-white">Nous vous souhaitons la bienvenue ! Comptez sur notre savoir-faire pour vivre des expériences mémorables, profiter de services d’excellence, et créer des souvenirs impérissables.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- recommended section -->
+    <!-- Contact Section -->
+     <br><br><br>
+    <h1 style="text-align:center ;"><b>Contactez Nous</b></h1><br><br>
+    <div class="contact-section">
+        <div class="contact-container">
+            
+            <div class="form-container">
+                <h2>Get In Touch</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Name" required>
+                        <input type="email" placeholder="Email Id" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="Subject" required>
+                        <input type="tel" placeholder="Phone No." required>
+                    </div>
+                    <textarea placeholder="Message" required></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12603.725044536768!2d-122.45803512570915!3d37.77492957965788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2f35e4e7%3A0xf49f2c296b7a0b55!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1644294884552!5m2!1sen!2sus" 
+                    width="600px" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+     <!-- footer section-->
+     <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <h5 class="mb-5 fs-6">Contact Us</h5>
+                    <div class="flex-grow-1">
+                        Customer Care<br>
+                        <span class="fs-5 theme-text-primary">+(1) 123 456 7890</span>
+                    </div>
+                    <div class="flex-grow-1 mt-3">
+                        Need live support?<br>
+                        <a href="#" class="fs-5 theme-text-primary">hi@example.com</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
+                    <div class="d-flex">
+                        <h5 class="mb-5 fs-6">Company</h5>
+                    </div>
+                    <div class="d-flex">
+                        <ul class="fl-menu">
+                            <li class="nav-item"><a href="javascript:void(0)">About Us</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Careers</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Blog</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Press</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Offers</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Deals</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
+                    <h5 class="mb-5 fs-6">Support</h5>
+                    <div class="mt-5">
+                        <ul class="fl-menu">
+                            <li class="nav-item"><a href="javascript:void(0)">Contact</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Legal Notice</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Privacy Policy</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Terms and Conditions</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="d-flex justify-content-lg-center">
+                        <h5 class="mb-5 fs-6">Other Services</h5>
+                    </div>
+                    <div class="d-flex justify-content-lg-center">
+                        <ul class="fl-menu">
+                            <li class="nav-item"><a href="javascript:void(0)">Bus</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Activity Finder</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Tour List</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Flight Search</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Cruise Ticket</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Holidays</a></li>
+                            <li class="nav-item"><a href="javascript:void(0)">Travel Agents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2 mb-5 mb-lg-0">
+                    <h5 class="mb-5 fs-6">Download App</h5>
+                    <a href="javascript:void(0)"
+                        class="d-inline-flex align-items-center border px-3 py-2 theme-border-radius min-w-150">
+                        <div class="flex-shrink-0">
+                            <img src="assets/images/icons/play-icon.png" class="img-fluid" alt="Google-Play"
+                                title="Google-Play">
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <p class="mb-0 small theme-text-accent-two">Get it on</p>
+                            <p class="mb-0 small theme-text-accent-one fw-bold">Google Play</p>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0)"
+                        class="d-inline-flex align-items-center border px-3 py-2 theme-border-radius mt-2 min-w-150">
+                        <div class="flex-shrink-0">
+                            <img src="assets/images/icons/apple.png" class="img-fluid" alt="apple" title="apple">
+                        </div>
+                        <div class="flex-grow-1 ms-2">
+                            <p class="mb-0 small theme-text-accent-two">Get it on</p>
+                            <p class="mb-0 small theme-text-accent-one fw-bold">App Store</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3 mt-lg-5">
+                    <p class="pt-2 mb-0 small theme-text-accent-one">&copy; 2025 RoundTours All rights reserved.
+                    </p>
+                </div>
+                <div class="col-12 col-lg-6 mt-5">
+                    <ul class="footer-link d-flex flex-row flex-wrap justify-content-lg-center align-items-center">
+                        <li><a href="javascript:void(0)">Privacy</a></li>
+                        <li><a href="javascript:void(0)">Terms</a></li>
+                        <li><a href="javascript:void(0)">Site Map</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-3 mt-5">
+                    <div class="d-flex social justify-content-lg-end">
+                        <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-facebook"></i></a>
+                        <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="javascript:void(0)" class="fs-4 pe-3"><i class="bi bi-instagram"></i></a>
+                        <a href="javascript:void(0)" class="fs-4"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll To Top Start-->
+        <a href="javascript:void(0)" class="scrollToTop"><i class="bi bi-chevron-double-up"></i></a>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- js file -->
+     <script src="assets/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script>
+         // Scroll Top
+         $(document).ready(function () {
+             var ScrollTop = $(".scrollToTop");
+             $(window).on('scroll', function () {
+                 if ($(this).scrollTop() < 500) {
+                     ScrollTop.removeClass("active");
+                 } else {
+                     ScrollTop.addClass("active");
+                 }
+             });
+             $('.scrollToTop').on('click', function () {
+                 $('html, body').animate({
+                     scrollTop: 0
+                 }, 500);
+                 return false;
+             });
+         });
+     </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropdowns = document.querySelectorAll('.dropdown-toggle');
+            dropdowns.forEach(function(dropdown) {
+                new bootstrap.Dropdown(dropdown);
+            });
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ </body>
+ 
+ </html>
