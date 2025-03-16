@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Connexion</h4>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Adresse e-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Votre adresse e-mail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" placeholder="Votre mot de passe">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Se connecter</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('connexionForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Empêche la soumission par défaut du formulaire
+          window.location.href = 'vol.html'; // Redirige vers la page souhaitée
+        });
+
+        document.getElementById('connexionForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    if (email === 'm.abbadi2724@uca.ac.ma' && password === 'meryam2004') {
+      // Informations d'identification correctes
+      window.location.href = 'page_de_redirection.html'; // Redirige vers la page souhaitée
+    } else {
+      // Informations d'identification incorrectes
+      alert('Adresse e-mail ou mot de passe incorrect.');
+    }
+  });
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
